@@ -1,0 +1,83 @@
+CREATE DATABASE JDBC;
+
+CREATE TABLE aluno
+(
+    idaluno SERIAL,
+    dt_nasc DATE NOT NULL,
+    nome VARCHAR(80) NOT NULL,
+    sexo VARCHAR(30) NOT NULL,
+    CONSTRAINT aluno_pkey PRIMARY KEY (idaluno)
+);
+
+INSERT INTO aluno(idaluno, dt_nasc, nome, sexo)
+VALUES 
+(1, '1827/08/05', 'Deodoro da Fonseca', 'Masculino'),
+(2, '1839/04/30', 'Floriano Peixoto', 'Masculino'),
+(3, '1841/10/04', 'Prudente de Morais', 'Masculino'),
+(4, '1841/02/15', 'Campos Sales', 'Masculino'),
+(5, '1848/07/07', 'Rodrigues Alves', 'Masculino'),
+(6, '1847/11/30', 'Afonso Pena', 'Masculino'),
+(7, '1867/10/02', 'Nilo Peçanha', 'Masculino'),
+(8, '1855/05/12', 'Hermes da Fonseca', 'Masculino'),
+(9, '1868/02/26', 'Venceslau Brás', 'Masculino'),
+(10, '1868/10/07', 'Delfim Moreira', 'Masculino'),
+(11, '1865/05/23', 'Epitácio Pessoa', 'Masculino'),
+(12, '1875/08/08', 'Artur Bernardes', 'Masculino'),
+(13, '1869/10/26', 'Washington Luís', 'Masculino'),
+(14, '1882/04/19', 'Getúlio Vargas', 'Masculino'),
+(15, '1886/01/28', 'José Linhares', 'Masculino'),
+(16, '1883/05/18', 'Eurico Gaspar Dutra', 'Masculino'),
+(17, '1899/02/03', 'Café Filho', 'Masculino'),
+(18, '1894/08/04', 'Carlos Luz', 'Masculino'),
+(19, '1888/09/03', 'Nereu Ramos', 'Masculino'),
+(20, '1902/09/12', 'Juscelino Kubitschek', 'Masculino'),
+(21, '1917/01/25', 'Jânio Quadros', 'Masculino'),
+(22, '1910/04/27', 'Ranieri Mazzilli', 'Masculino'),
+(23, '1919/03/01', 'João Goulart', 'Masculino'),
+(24, '1897/09/20', 'Humberto Castelo Branco', 'Masculino'),
+(25, '1899/10/03', 'Artur da Costa e Silva', 'Masculino'),
+(26, '1905/12/04', 'Emílio Garrastazu Médici', 'Masculino'),
+(27, '1907/08/03', 'Ernesto Geisel', 'Masculino'),
+(28, '1918/01/15', 'João Figueiredo', 'Masculino'),
+(29, '1910/03/04', 'Tancredo Neves', 'Masculino'),
+(30, '1930/04/24', 'José Sarney', 'Masculino'),
+(31, '1949/08/12', 'Fernando Collor', 'Masculino'),
+(32, '1930/06/28', 'Itamar Franco', 'Masculino'),
+(33, '1931/06/18', 'Fernando Henrique Cardoso', 'Masculino'),
+(34, '1945/10/27', 'Luiz Inácio Lula da Silva', 'Masculino'),
+(35, '1947/12/14', 'Dilma Rousseff', 'Feminino'),
+(36, '1940/09/23', 'Michel Temer', 'Masculino'),
+(37, '1955/03/21', 'Jair Bolsonaro', 'Masculino');
+
+CREATE TABLE curso
+(
+    idcurso SERIAL,
+    nomecurso VARCHAR(100) NOT NULL,
+    CONSTRAINT curso_pkey PRIMARY KEY (idcurso)
+);
+
+INSERT INTO curso(idcurso, nomecurso)
+VALUES 
+(1, 'Ciências Econômicas'),
+(2, 'Ciências Sociais'),
+(3, 'Direito Penal'),
+(4, 'Direito Civil'),
+(5, 'Direito Ambiental'),
+(6, 'Direito Comercial'),
+(7, 'Direito Digital'),
+(8, 'Direito do Consumidor'),
+(9, 'Direito Contratual'),
+(10, 'Direito Trabalhista'),
+(11, 'Direito Tributário'),
+(12, 'Direito Imobiliário'),
+(13, 'Direito Eleitoral'),
+(14, 'Direito Administrativo'),
+(15, 'Direito Médico'),
+(16, 'Direito Previdenciário'),
+(17, 'Gestão Pública'),
+(18, 'História'),
+(19, 'Jornalismo'),
+(20, 'Relações Internacionais'),
+(21, 'Relações Públicas'),
+(22, 'Serviço Social'),
+(23, 'Administração');
